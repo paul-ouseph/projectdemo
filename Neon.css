@@ -1,0 +1,288 @@
+/* No margin */
+body {
+    margin: 0;
+    background-color: #1a1a2e; /* Deep dark blue background */
+    color: #f0f0f0; /* Light text color */
+    font-family: 'Arial', sans-serif; /* Sleek modern font */
+}
+
+/* Left side of the website */
+.left {
+    background-color: #162447; /* Dark navy background for the left section */
+    width: 370px;
+    float: left;
+    min-height: 113vh; /* Full viewport height */
+    color: #f0f0f0;
+    padding: 20px;
+}
+
+.sems {
+    margin-left: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e94560; /* Vibrant pink/red for headers */
+}
+
+/* Divider between sems and settings */
+.divider {
+    height: 2px;
+    background-color: #e94560; /* Accent color divider */
+    margin: 20px 0;
+    width: 100%;
+}
+
+.moveup {
+    margin: 2px 0;
+}
+
+/* Settings animation */
+.settings-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #162447; /* Darker blue for settings button */
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    gap: 12px; /* Space between icon and text */
+    transition: background-color 0.3s ease;
+}
+
+.settings-button:hover {
+    background-color: #162447; /* Hover effect with vibrant color */
+}
+
+.settings-button .fa-cog {
+    transition: transform 0.5s ease;
+}
+
+.settings-button.clicked .fa-cog {
+    transform: rotate(90deg); /* 1/4th turn */
+}
+
+.dropdown-menu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+}
+
+.dropdown-button {
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #162447; /* Same color as settings button */
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #f0f0f0;
+}
+
+.dropdown-button:hover {
+    background-color: #e94560;
+}
+
+.dropdown-menu.open {
+    max-height: 200px;
+    transition: max-height 0.5s ease-in;
+}
+
+/* Application section styling */
+.application {
+    background-color: #0f3460; /* Deep navy for the application box */
+    padding: 20px;
+    width: 250px;
+    margin: 20px auto;
+    border: 1px solid #1f4068; /* Lighter border */
+    color: #f0f0f0;
+    border-radius: 12px;
+    background: #0f3460;
+    margin-right: 60px;
+}
+
+.application-status {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    border-radius: 8px;
+    background: #162447; /* Darker background for status items */
+    padding: 10px;
+}
+
+.status-on {
+    color: #21e6c1; /* Bright teal for ON status */
+    font-weight: bold;
+}
+
+.status-off {
+    color: #e94560; /* Pink/red for OFF status */
+    font-weight: bold;
+}
+
+/* Website center section */
+.webcenter {
+    background-color: #162447; /* Dark navy background */
+    min-height: 109vh; /* Full viewport height */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+}
+
+/* Calendar styling */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns */
+    gap: 10px; /* More spacing between items */
+    max-width: 400px;
+    margin: 30px auto;
+    background-color: #0f3460; /* Dark background for calendar */
+    padding: 20px;
+    border: 1px solid #1f4068; /* Lighter border */
+    border-radius: 12px;
+}
+
+.day, .date {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #1f4068;
+    background-color: #1f4068;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.day {
+    background-color: #e94560; /* Accent color for day headers */
+}
+
+.date {
+    background-color: #1f4068; /* Darker color for dates */
+}
+
+.empty {
+    border: none;
+    background-color: #162447;
+}
+
+/* Right side of the website */
+.right {
+    background-color: #162447; /* Dark navy for the right section */
+    width: 370px;
+    float: right;
+    height: 113vh;
+    padding: 20px;
+    color: #f0f0f0;
+}
+
+/* Box styling for hr/day/month */
+.box {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid #1f4068;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    margin-left: 60px;
+    border-radius: 12px;
+    background-color: #0f3460;
+    color: #21e6c1; /* Vibrant teal for text */
+}
+
+.label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-left: 60px;
+    color: #e94560; /* Accent color for labels */
+}
+
+/* Centering everything */
+.middle {
+    margin-left: 50px;
+}
+
+#blue {
+    background-color: #53354a; /* Replace blue with a dark plum color */
+    margin-bottom: 70px;
+    width: 90px;
+    height: 20px;
+}
+
+#green {
+    background-color: #21e6c1; /* Vibrant teal */
+}
+
+.center {
+    width: 300px;
+    height: auto;
+    float: left;
+}
+
+
+
+/* Style for the theme buttons */
+.theme-buttons button {
+    background-color: #162447;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+        margin-left: 50px;
+  }
+  
+  .theme-buttons button:hover {
+    background-color: #0d274f; /* Darker blue on hover */
+  }
+  
+  /* Optional: Animation for dropdown */
+  .theme-buttons {
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+  }
+
+  .row {
+    display: flex;
+    align-items: center; /* Vertically aligns elements */
+  }
+  
+  .labelingboxes{
+    margin: 0; /* Removes extra spacing */
+    margin-bottom: 70px;
+  }
+  #cal{
+    background-color: #0a1d37;
+    color: #f8f8f8;
+    display: inline-block;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  #month{
+    background-color: #0a1d37;
+    color: #f8f8f8;
+    display: inline-block;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  #year{
+    background-color: #0a1d37;
+    color: #f8f8f8;
+    display: inline-block;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+  }        

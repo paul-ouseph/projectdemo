@@ -1,0 +1,319 @@
+/* No margin */
+body {
+  margin: 0;
+  background-color: #ffffff; /* White background for light theme */
+  color: #000000; /* Black text */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Left side of the website */
+.left {
+  background-color: #0a1d37; /* Black background for the left section */
+  width: 310px;
+  float: left;
+  color: #ffffff; /* White text for contrast */
+  padding: 20px;
+  min-height: 111vh;
+}
+
+.sems {
+  margin-left: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f8f8f8; /* Dark blue for headers */
+}
+
+/* Divider between sems and settings */
+.divider {
+  height: 2px;
+  background-color: #0a1d37; /* Dark blue accent color divider */
+  margin: 20px 0;
+  width: 100%;
+}
+
+.moveup {
+  margin: 2px 0;
+}
+
+/* Settings animation */
+.settings-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #0a1d37; /* Light gray for settings button */
+  color: #ffffff; /* Black text */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 12px; /* Space between icon and text */
+  transition: background-color 0.3s ease;
+}
+
+.settings-button:hover {
+  background-color: #0a1d37; /* Dark blue hover effect */
+  color: #ffffff; /* White text on hover */
+}
+
+.settings-button .fa-cog {
+  transition: transform 0.5s ease;
+}
+
+.settings-button.clicked .fa-cog {
+  transform: rotate(90deg); /* 1/4th turn */
+}
+
+.dropdown-menu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+.dropdown-button {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0a1d37; /* Same light gray as settings button */
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #ffffff; /* Black text */
+}
+
+.dropdown-button:hover {
+  background-color: #0a1d37; /* Dark blue hover */
+  color: #8a8a8a; /* White text on hover */
+}
+
+.dropdown-menu.open {
+  max-height: 200px;
+  transition: max-height 0.5s ease-in;
+}
+
+/* Application section styling */
+.application {
+  background-color: #0a1d37; /* Dark blue for the application box */
+  padding: 20px;
+  width: 250px;
+  margin: 20px auto;
+  border: 1px solid #888888; /* Light gray border */
+  color: #ffffff; /* White text */
+  border-radius: 12px;
+  margin-right: 60px;
+}
+
+.application-status {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  border-radius: 8px;
+  background: #3d5d85; /* Light gray for status items */
+  color: #ffffff;
+  padding: 10px;
+}
+
+.status-on {
+  color: #42b62b; /* Dark blue for ON status */
+  font-weight: bold;
+}
+
+.status-off {
+  color: #fd0000f1; /* Gray for OFF status */
+  font-weight: bold;
+}
+
+/* Website center section */
+.webcenter {
+  background-color: #ffffff; /* Pure white background */
+  min-height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  color: #000000; /* Black text */
+}
+
+/* Calendar styling */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columns */
+  gap: 10px; /* More spacing between items */
+  max-width: 400px;
+  margin: 30px auto;
+  background-color: #ffffff; /* White background for calendar */
+  padding: 20px;
+  border: 1px solid #0a1d37; /* Dark blue border */
+  border-radius: 12px;
+}
+
+.day, .date {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #0a1d37; /* Dark blue border */
+  background-color: #f8f9fa; /* Light gray for dates */
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff; /* Black text */
+}
+
+.day {
+  background-color: #0a1d37; /* Dark blue for day headers */
+  color: #fcfcfc; /* White text */
+}
+
+.date {
+  background-color: #434349; /* Light gray for dates */
+}
+
+.empty {
+  border: none;
+  background-color: #434349; /* White background */
+}
+#month{
+  background-color: #0a1d37;
+  color: #f8f8f8;
+  display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#year{
+  background-color: #0a1d37;
+  color: #f8f8f8;
+  display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#cal{
+  background-color: #0a1d37;
+  color: #f8f8f8;
+  display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Right side of the website.................................................................................. */
+.right {
+  background-color: #0a1d37; /* White for the right section */
+  width: 310px;
+  float: right;
+  min-height: 111vh;
+  padding: 20px;
+  color: #000000; /* Black text */
+}
+
+/* Box styling for hr/day/month */
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 2px solid #0a1d37; /* Dark blue border */
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  margin-left: 60px;
+  border-radius: 12px;
+  background-color: #f8f9fa; /* Light gray background */
+  color: #0a1d37; /* Dark blue text */
+}
+
+.label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-left: 60px;
+  color: #bcbec0; /* Dark blue for labels */
+}
+
+/* Centering everything */
+.middle {
+  margin-left: 50px;
+  margin-top: 70px;
+}
+
+#blue {
+  background-color: #0d274f; /* Dark blue background */
+  color: #ffffff; /* White text */
+  margin-bottom: 60px;
+  width: 90px;
+  height: 20px;
+}
+
+#green {
+  background-color: #90b5ce; /* Dark blue background */
+  color: #ffffff; /* White text */
+}
+
+.center {
+  width: 300px;
+  height: auto;
+  float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Style for the theme buttons */
+.theme-buttons button {
+  background-color: #0a1d37;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background-color 0.3s;
+  margin-left: 50px;
+}
+
+.theme-buttons button:hover {
+  background-color: #0d274f; /* Darker blue on hover */
+}
+
+/* Optional: Animation for dropdown */
+.theme-buttons {
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+}
+
+
+.row {
+  display: flex;
+  align-items: center; /*Vertically aligns elements */
+}
+
+.labelingboxes{
+  margin: 0; /* Removes extra spacing */
+  margin-bottom: 70px;
+}
